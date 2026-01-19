@@ -6,6 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import gdgLogo from '@/assets/gdg-logo.png';
 
 const Hero = () => {
   const { selectedYear, setSelectedYear, availableYears } = useYear();
@@ -14,12 +15,13 @@ const Hero = () => {
     <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Google-colored dots animation */}
-          <div className="flex justify-center gap-3 mb-8 animate-fade-in">
-            <span className="w-4 h-4 rounded-full bg-google-blue animate-bounce" style={{ animationDelay: '0ms' }}></span>
-            <span className="w-4 h-4 rounded-full bg-google-red animate-bounce" style={{ animationDelay: '100ms' }}></span>
-            <span className="w-4 h-4 rounded-full bg-google-yellow animate-bounce" style={{ animationDelay: '200ms' }}></span>
-            <span className="w-4 h-4 rounded-full bg-google-green animate-bounce" style={{ animationDelay: '300ms' }}></span>
+          {/* GDG Logo with animation */}
+          <div className="flex justify-center mb-8 animate-fade-in">
+            <img 
+              src={gdgLogo} 
+              alt="Google Developer Group Logo" 
+              className="h-24 md:h-32 w-auto animate-pulse hover:scale-105 transition-transform duration-300"
+            />
           </div>
 
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
